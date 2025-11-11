@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Evento</title>
+    <!-- Carrega o Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Garante que o body e o html ocupem 100% da altura */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Evita barras de rolagem duplicadas */
+        }
+    </style>
+</head>
+<body class="flex flex-col h-screen">
+
+    <!-- 
+      Aviso Importante:
+      É muito provável que o site do Doity não carregue aqui.
+      A maioria dos sites bloqueia a incorporação via iframe por segurança.
+      Se aparecer uma tela em branco, é o comportamento esperado.
+    -->
+    <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4" role="alert">
+        <p class="font-bold">Aviso:</p>
+        <p>O site da Doity provavelmente não carregará neste quadro por motivos de segurança (é uma proteção normal deles). O rodapé com a imagem está funcionando abaixo.</p>
+    </div>
+
+    <!-- 
+      Tag <iframe>
+      - "flex-1": Faz este elemento crescer e ocupar todo o espaço vertical disponível.
+      - "w-full": Ocupa 100% da largura.
+    -->
+    <iframe 
+        src="https://programacao.doity.com.br/?eventId=274872" 
+        class="flex-1 w-full border-0"
+        title="Página do Evento Doity">
+        
+        <!-- Esta mensagem aparece se o navegador não suportar iframes -->
+        <p>Seu navegador não suporta iframes.</p>
+        
+    </iframe>
+
+    <!-- 
+      Rodapé (Footer)
+      - "bg-white p-4 shadow-inner": Estilização do rodapé.
+      - "flex-shrink-0": Impede que o rodapé encolha.
+    -->
+    <footer class="bg-white p-4 shadow-inner text-center flex-shrink-0">
+        
+        <!-- Sua imagem, agora dentro do rodapé -->
+        <img 
+            src="mascara.jpg" 
+            alt="Banner de patrocinadores do evento" 
+            class="rounded-md shadow-md mx-auto w-full h-auto object-contain"
+            style="max-width: 960px;"> <!-- Limitando a largura máxima do banner -->
+    
+    </footer>
+
+</body>
+</html>
